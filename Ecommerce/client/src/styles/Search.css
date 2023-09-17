@@ -1,0 +1,19 @@
+/* Search.css */
+
+/* Center align the container */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  /* Limit card width to 100% and set max-width */
+  
+  /* Adjust padding for smaller screens */
+  @media (max-width: 768px) {
+    .search-container {
+      padding: 0 10px; /* Adjust as needed */
+    }
+  }
+  
