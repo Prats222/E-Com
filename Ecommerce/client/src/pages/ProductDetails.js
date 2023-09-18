@@ -2,11 +2,15 @@ import Layout from '../components/Layout/Layout';
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/cart';
+import toast from 'react-hot-toast';
 const ProductDetails = () => {
+
+  const navigate= useNavigate();
   const params= useParams()
   const [product, setProduct]= useState({})
-
+  const [cart,setCart]= useCart()
   const [relatedProducts, setRelatedProducts]= useState([])
   //initial Product details(lifecycle method)
   useEffect(()=>{
@@ -54,7 +58,12 @@ return (
     {product.category && (
                 <h6>Category: {product.category.name}</h6>
               )}
-    <button class="btn btn-primary ms-1">Add To Cart</button>
+              <button class="btn btn-primary ms-1" 
+                    onClick={() =>{setCart([...cart,product])
+                    localStorage.setItem('cart', JSON.stringify([...cart,product]))
+                    toast.success('item added to cart')
+                    }}>
+                    Add To Cart</button>
     
   </div>
 </div>
@@ -81,8 +90,18 @@ return (
                     <h5 className="card-title">{p.name}</h5>
                     <p className="card-text">{p.description}</p>
                     <p className="card-text">₹ {p.price}</p>
-                  
-                    <button class="btn btn-secondary ms-1">Add To Cart</button>
+                    <button
+                      className="btn btn-info"
+                      onClick={() => navigate(`/product/${p.slug}`)}
+                    >
+                      More Details
+                    </button>
+                    <button class="btn btn-secondary ms-1" 
+                    onClick={() =>{setCart([...cart,p])
+                    localStorage.setItem('cart', JSON.stringify([...cart,p]))
+                    toast.success('item added to cart')
+                    }}>
+                    Add To Cart</button>
                   </div>
                 </div>
               

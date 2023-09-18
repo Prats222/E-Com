@@ -1,0 +1,65 @@
+/* Center-align the heading and results count */
+.text-center {
+    text-align: center;
+  }
+  
+  /* Add some margin to the top and bottom of the container */
+  .category {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Center-align the product container */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally center-align items */
+  }
+  
+  /* Style the product cards */
+  .card2 {
+    width: 18rem;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+  }
+  
+  /* Style the product images */
+  .card2-img-top {
+    max-height: 300px;
+    height: auto;
+    width: 100%;
+  }
+  
+  /* Style the product description text */
+  .card2-text {
+    font-size: 14px;
+  }
+  
+  /* Style the price */
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Style the "More Details" button */
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+  }
+  
+  .btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 767px) {
+    .card2 {
+      width: 100%;
+    }
+    
+  }
+  

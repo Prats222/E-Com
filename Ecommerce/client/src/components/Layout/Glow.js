@@ -9,7 +9,7 @@ const Glow = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
 <a href="https://twitter.com" style={iconStyles}>
         <i className="fa fa-twitter" id="twitter"></i>
       </a>
