@@ -6,7 +6,7 @@ import  {Toaster} from "react-hot-toast";
 
 const Layout = ({children,title,description,keywords,author }) => {
   return (
-    <div >
+    <div className="page-container22">
     <Helmet>
                 
   <meta charSet="utf-8" />

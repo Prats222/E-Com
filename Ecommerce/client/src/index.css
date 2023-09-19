@@ -53,8 +53,8 @@ font-family: 'Saira', sans-serif; */
   padding: 15px;
 }
 .footer a:hover{
-  color:#289f79;
-  border-bottom: 1px solid #35af28;
+  color:#ffffff;
+  border-bottom: 1px solid #040404;
 }
 
 /* =====pnf css==== */
@@ -105,56 +105,73 @@ color: rgb(0, 0, 0) !important;
 }
 
 
-/*Product details card  */
-.smol-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
+.card3{
+  background-color: rgba(245, 234, 234, 0.977);
+    width: 18rem;
+    padding: 4px;
 }
 
-.smol-image {
-  flex: 1;
-  max-width: 40%;
-}
-.smol-img {
-  width: 50%;
-  height: auto;
-  display: block;
-}
 
-.smol-details {
-  flex: 1;
-  padding: 20px;
+.countdown-timer {
   text-align: center;
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  margin-left: -290px;
+  background-color: #f2f2f2;
+  padding: 4px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.smol-details h1 {
+.countdown-timer h2 {
   font-size: 24px;
- 
+  color: #ea0a0a;
 }
 
-.smol-details h6 {
-  margin-top: 10px;
-  font-size: 18px;
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
+
+.timer-unit {
+  text-align: center;
+}
+
+.timer-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.timer-label {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
-  .smol-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+  .timer-value {
+    font-size: 24px;
   }
-
-  .smol-details {
-    margin-left: -45px; /* Remove margin on smaller screens */
-    margin-top: 10px; /* Add some top margin for spacing */
+  .timer-label {
+    font-size: 12px;
   }
-
-  .smol-img {
-    width: 250px;
-    margin-right: 90px;
 }
+
+.page-container22 {
+  background-color: #ebf1b8;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+  /* Other background styles */
+}
+
+.logo2{
+  width: 250px;
+  height: 40px;
+  margin-left: -6px;
+  border-radius: 10px;
+}
+.logo3{
+  width: 50px;
+  height: 45px;
+  margin-left: 6px;
+  border-radius: 10px;
 }

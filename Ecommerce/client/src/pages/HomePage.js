@@ -6,6 +6,11 @@ import { Prices } from '../components/Prices';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/cart';
 import toast from 'react-hot-toast';
+import { AiOutlineReload } from "react-icons/ai";
+import { Carousel } from 'react-bootstrap'
+import '../styles/HomePage.css'
+import {BsCart4,BsSmartwatch} from 'react-icons/bs'
+import CountdownTimer from './CountDown';
 
 const HomePage = () => {
   const navigate= useNavigate();
@@ -110,14 +115,65 @@ const filterProduct = async () =>{
   }
 }
 
+const now = new Date();
+  const nextDay = new Date(now);
+  nextDay.setDate(nextDay.getDate() + 1);
+  nextDay.setHours(12, 0, 0, 0);
 
 
   return (
     <Layout title={"All Products Best Offers"}>
-    <div className='row mt-3'>
-      <div className='col-md-2'>
+ 
+      {/* banner image */}
+      {/* <img
+        src="/images/banner2.jpg"
+        className="banner-img"
+        alt="bannerimage"
+        width={"100%"}
+        height={"420px"}
+      /> */}
+
+<Carousel>
+        {/* Image 1 */}
+        <Carousel.Item>
+        <img
+        src="/images/banner2.jpg"
+        className="banner-img"
+        alt="bannerimage"
+        width={"100%"}
+        height={"420px"}
+      />
+        </Carousel.Item>
+
+        {/* Image 2 */}
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/banner3.jpg"
+            alt="Second slide"
+            width={"100%"}
+        height={"420px"}
+          />
+        </Carousel.Item>
+
+        {/* Image 3 */}
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/banner4.webp"
+            alt="Third slide"
+            width={"100%"}
+        height={"420px"}
+          />
+        </Carousel.Item>
+      </Carousel>
+
+
+      <CountdownTimer targetTime={nextDay} />
+    <div className='container-fluid row mt-3 home-page'>
+      <div className='col-md-3 filters'>
       {/* filter by category  */}
-        <h4 className='text-center'>Filter By Category</h4>
+        <h4 className='text-center bold'>Filter By Category</h4>
 <div className='d-flex flex-column'>
 {categories.map((c)=>(
   <Checkbox key={c._id} onChange={(e) => handleFilter(e.target.checked,c._id)}>
@@ -126,7 +182,7 @@ const filterProduct = async () =>{
 ))}
 
 {/* filter by price */}
-<h4 className='text-center mt-4'>Filter By Price</h4>
+<h4 className='text-center mt-4 bold'>Filter By Price</h4>
 <div className='d-flex flex-column'>
 <Radio.Group onChange={e => setRadio(e.target.value)}>
 {Prices?.map(p=>(
@@ -151,7 +207,7 @@ const filterProduct = async () =>{
       </div>
       <div className='col-md-9'>
       {/* {JSON.stringify(radio,null,4)} */}
-        <h1 className='text-center'> All Products</h1>
+       
         <div className='d-flex flex-wrap'>
         {products?.map((p) => (
               
@@ -162,18 +218,18 @@ const filterProduct = async () =>{
                     alt={p.name}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{p.name}</h5>
+                    <h5 className="card-title bran">{p.name}</h5>
                     <p className="card-text">{p.description}</p>
-                    <p className="card-text">₹ {p.price}</p>
-                    <button class="btn btn-primary ms-1"
+                    <p className=" price">₹ {p.price}</p>
+                    <button class="btn btn-primary ms-1 gap"
                     onClick={()=> navigate(`/product/${p.slug}`)}
-                    >More Details</button>
-                    <button class="btn btn-secondary ms-1" 
+                    >More Details <BsSmartwatch /> </button>
+                    <button class="btn btn-secondary ms-1 gap" 
                     onClick={() =>{setCart([...cart,p])
                     localStorage.setItem('cart', JSON.stringify([...cart,p]))
                     toast.success('item added to cart')
                     }}>
-                    Add To Cart</button>
+                    Add To Cart <BsCart4 /> </button>
                   </div>
                 </div>
               
@@ -181,12 +237,12 @@ const filterProduct = async () =>{
         </div>
        <div className='m-2 p-3'>
         {products && products.length < total && (
-          <button className='btn btn-warning'
+          <button className='btn loadmore'
           onClick={(e)=>{
             e.preventDefault();
             setPage(page+1);
           }} >
-             {loading? "loading..." : "Loadmore"}
+             {loading? ("loading...") : ( <> {" "} LoadMore <AiOutlineReload /> </>) }
           </button>
         )}
        </div>

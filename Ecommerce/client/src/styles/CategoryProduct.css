@@ -21,7 +21,7 @@
     width: 18rem;
     margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 500px;
+    height: 450px;
   }
   
   /* Style the product images */
@@ -34,6 +34,10 @@
   /* Style the product description text */
   .card2-text {
     font-size: 14px;
+    color: white;
+  }
+  .card2-title{
+    color: #fff;
   }
   
   /* Style the price */

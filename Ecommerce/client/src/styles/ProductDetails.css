@@ -1,0 +1,105 @@
+/* ProductDetails Page CSS */
+
+/* Smol Container */
+.smol-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  /* Smol Image */
+  .smol-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .smol-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Smol Details */
+  .smol-details {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Details Section */
+  .smol-details h1 {
+    color: rgb(54, 53, 53);
+    font-family: "Playfair Display", serif;
+  }
+  
+  .smol-details h6 {
+    color: rgb(54, 53, 53);
+  }
+  
+  /* Button Styles */
+  .smol-details button {
+    border-radius: 0;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.3s;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Improve button hover effect */
+  .smol-details button:hover {
+    background-color: #3d0690;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Similar Products Section */
+  .row h1 {
+    color: rgb(54, 53, 53);
+    font-family: "Playfair Display", serif;
+    margin-top: 20px;
+  }
+  
+  /* Message for Similar Products */
+  .text-center-message {
+    text-align: center;
+    color: gray;
+    margin-top: 10px;
+  }
+  
+  /* Card Styles for Similar Products */
+  .card {
+    background-color: rgba(0, 0, 0, 0.977);
+    width: 18rem;
+    padding: 4px;
+    margin: 10px;
+  }
+  
+  /* Card Image */
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Card Title */
+  .card-title {
+    color: rgb(194, 184, 184);
+  }
+  
+  /* Card Text */
+  .card-text {
+    color: rgb(232, 218, 218);
+  }
+  
+  /* Card Price */
+  .price {
+    color: rgb(13, 132, 13);
+    font-weight: bold;
+  }
+  

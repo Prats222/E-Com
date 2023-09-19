@@ -23,6 +23,7 @@ import ProductDetails from './pages/ProductDetails';
 import Categories from './pages/Categories';
 import CategoryProduct from './pages/CategoryProduct';
 import CartPage from './pages/CartPage';
+import AdminOrders from './pages/Admin/AdminOrders';
 
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
 
 
     <Route path="admin/users" element={<Users />}   />
+    <Route path="admin/orders" element={<AdminOrders />}   />
 </Route>
 
 

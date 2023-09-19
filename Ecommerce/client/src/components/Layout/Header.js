@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { BiSolidShoppingBags } from 'react-icons/bi';
+import { MdSwipeRight } from 'react-icons/md';
 import { useAuth } from '../../context/auth';
 import toast from 'react-hot-toast';
 import Dashboard from './../../pages/user/Dashboard';
@@ -8,6 +8,8 @@ import Searchinput from '../Form/Searchinput';
 import useCategory from '../../hooks/useCategory';
 import { useCart } from '../../context/cart';
 import {Badge} from 'antd'
+import {MdOutlineShoppingCartCheckout} from 'react-icons/md'
+
 const Header = () => {
   const [auth,setAuth]= useAuth()
   const categories = useCategory()
@@ -36,7 +38,7 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <Link to="/" className="navbar-brand">
-            <BiSolidShoppingBags /> PRAT-SHOP
+            <MdSwipeRight /> <img className='logo3' src='images/smol.png' /> <img className='logo2' src='images/logo6.png' />
           </Link>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
            <Searchinput />
@@ -108,7 +110,7 @@ const Header = () => {
             <li className="nav-item">
             <Badge count={cart?.length} showZero>
             <NavLink to="/cart" className="nav-link" activeClassName="active">
-                Cart 
+               CART <MdOutlineShoppingCartCheckout />
               </NavLink>
     </Badge>
              

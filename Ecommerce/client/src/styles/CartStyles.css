@@ -1,0 +1,66 @@
+/* CSS for CartPage */
+.cart-page {
+    margin-top: 64px;
+  }
+  
+  .cart-page h1 {
+    padding: 15px !important;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    background-color: rgba(0, 0, 255, 0.072) !important;
+  }
+  
+  .cart-page h1 > p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+   .card2 {
+    padding: 10px !important;
+    margin-bottom: 15px !important;
+    background-color: rgba(3, 3, 3, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 480px;
+  }
+  
+  .final {
+    width: 300px; /* Allow the image to adjust its width */
+    height: 200px; /* Set a fixed height for the image */
+    margin-left: -25px;
+    max-height: 100%; /* Ensure the image scales proportionally */
+    object-fit: contain; /* Maintain image aspect ratio without distortion */
+  }
+  
+   .below {
+    padding-left: 15px;
+    margin-bottom: -17px;
+    margin-left: -10px;
+    display: inline-block;
+  }
+  .gobro{
+    margin-top: 200px;
+    font-style: italic;
+    color: azure;
+  }
+  
+  .left-aligned-text {
+    text-align: left;
+  }
+  
+  .cart-remove-btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-summary {
+    text-align: center;
+  }
+  
+  /* Add responsive margin for small screens */
+  @media (max-width: 768px) {
+    .cart-page .col-md-4 {
+      margin-top: 20px;
+    }
+  }
+  
