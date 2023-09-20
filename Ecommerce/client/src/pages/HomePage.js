@@ -141,7 +141,7 @@ const now = new Date();
         className="banner-img"
         alt="bannerimage"
         width={"100%"}
-        height={"420px"}
+        height={"450px"}
       />
         </Carousel.Item>
 
