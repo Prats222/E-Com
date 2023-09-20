@@ -8,7 +8,9 @@ import Searchinput from '../Form/Searchinput';
 import useCategory from '../../hooks/useCategory';
 import { useCart } from '../../context/cart';
 import {Badge} from 'antd'
-import {MdOutlineShoppingCartCheckout} from 'react-icons/md'
+import {MdOutlineShoppingCartCheckout} from 'react-icons/md';
+import {IoWatch} from 'react-icons/io5';
+import {FcMultipleSmartphones} from 'react-icons/fc'
 
 const Header = () => {
   const [auth,setAuth]= useAuth()
@@ -23,7 +25,10 @@ const Header = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg "  style={{
+      backgroundColor: '#c7af7e',
+      backgroundImage: 'url("https://www.transparenttextures.com/patterns/cubes.png")',
+    }}>
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -37,8 +42,10 @@ const Header = () => {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <Link to="/" className="navbar-brand">
-            <MdSwipeRight /> <img className='logo3' src='images/smol.png' /> <img className='logo2' src='images/logo6.png' />
+          <Link to="/" className="navbar-brand aand">
+          <MdSwipeRight style={{ fontSize: '24px' }}/> <IoWatch style={{ fontSize: '27px' }}/> <em><strong>PRAT</strong></em>-<span style={{ color: 'red' }}>SHOP</span> <FcMultipleSmartphones style={{ fontSize: '27px' }}/>
+
+            
           </Link>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
            <Searchinput />
